@@ -2,5 +2,8 @@
 
 set -e
 
+# CI 环境下若任意步骤失败则终止，确保构建结果可靠
+
+# 构建静态站点并使用 htmlproofer 校验生成的主页，忽略缺失 alt 的图片
 bundle exec jekyll build --baseurl "."
 htmlproofer _site/index.html --empty-alt-ignore
