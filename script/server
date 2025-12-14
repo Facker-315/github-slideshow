@@ -2,4 +2,7 @@
 
 set -e
 
+# 任何命令失败都立即退出，避免开发服务器以异常状态运行
+
+# 使用 Jekyll 启动本地开发服务器，透传所有附加参数
 bundle exec jekyll serve "$@"
